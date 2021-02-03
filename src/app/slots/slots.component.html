@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Slot List</h4>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="list-group">
+                <a href="javascript:void(0)" class="list-group-item" *ngFor="let slot of slots" [routerLink]="['/slots-detail',slot.id ]" [ngClass]="{'bg-color': slot.completed === true }">{{slot.timeSlotStart}} - {{slot.timeSlotEnd}}</a>
+            </div>
+        </div>
+    </div>
+</div>
